@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Kuie</title>
+  <meta name="author" content="Kuie">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+
+        <!-- ============== Intro ============== -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Kuie</name>
+              </p>
+              <p>
+                I am currently a [your degree, e.g., undergraduate / M.S. student] at
+                <a href="#">[Your University]</a>, [your department/school].
+                I am advised by <a href="#">[Your Advisor]</a>.
+              </p>
+              <p>
+                My research interests are in [your interests, e.g., computer vision, machine learning, etc.].
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:your-email@example.com">Email</a> &nbsp/&nbsp
+                <a href="https://github.com/kuieless">Github</a> &nbsp/&nbsp
+                <!-- <a href="#">Google Scholar</a> -->
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/profile.jpg"><img style="width:60%;max-width:80%" alt="profile photo" src="images/profile.jpg"></a>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <!-- ============== News ============== -->
+        <table width="92%" align="left" border="0" cellspacing="0" style="padding-left:20px;padding-bottom:10px"><tbody>
+          <tr><td><heading>News</heading></td></tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <div class="news">
+            <ul class="news" style="margin-top:5px; padding-top:0;">
+              <li>[Date]: [News item — paper accepted, award, etc.]</li>
+              <li>[Date]: [News item]</li>
+            </ul>
+          </div>
+        </table>
+
+        <!-- ============== Education ============== -->
+        <table width="100%" align="center" border="0" cellspacing="0" style="padding-left:20px;padding-bottom:10px;padding-top:20px;"><tbody>
+          <tr><td><heading>Education</heading></td></tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="width:35%;padding-left:30px">[Start] - [End]</td>
+            <td style="width:65%;padding-left:00px">[Degree] at <a href="#">[Institution]</a>, supervised by <a href="#">[Advisor]</a></td>
+          </tr>
+          <tr>
+            <td style="width:35%;padding-left:30px">[Start] - [End]</td>
+            <td style="width:65%;padding-left:00px">[Degree] at <a href="#">[Institution]</a></td>
+          </tr>
+        </table>
+
+        <!-- ============== Research Highlight ============== -->
+        <table width="100%" align="center" border="0" cellspacing="0" style="padding-top:40px;padding-left:20px;padding-bottom:10px"><tbody>
+          <tr><td><heading>Research Highlight</heading></td></tr>
+        </tbody></table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" style="padding-top:05px;padding-left:20px;padding-bottom:0px"><tbody>
+          <tr><td>
+            <div class="grid-container">
+              <!-- Template for a project card: copy this block for each project -->
+              <div>
+                <a href="#">
+                  <img src="images/project_placeholder.jpg" height="120" alt="">
+                </a>
+                <p>[VENUE'XX] Project Title: Short Description</p>
+              </div>
+            </div>
+          </td></tr>
+        </tbody></table>
+
+        <!-- ============== Publications ============== -->
+        <table width="100%" align="center" border="0" cellspacing="0" style="padding-top:40px;padding-left:20px;padding-bottom:10px"><tbody>
+          <tr><td>
+            <heading>Publications
+              [<a href="#" class="publicationFilter" data-filter="selected">Selected</a>]
+              [<a href="#" class="publicationFilter" data-filter="all">All</a>]
+            </heading>
+            <br>
+            (<strong><sup>#</sup></strong> corresponding author, <strong>*</strong> equal contribution)
+          </td></tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody id="publications">
+            <!-- Dynamic publication entries will be added here -->
+          </tbody>
+        </table>
+
+        <!-- ============== Footer ============== -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr><td style="padding:0px"><br>
+            <p style="text-align:right;font-size:small;">Website adapted from <a href="https://jonbarron.info/">Jon Barron</a></p>
+          </td></tr>
+        </tbody></table>
+
+      </td>
+    </tr>
+  </table>
+
+  <!-- ============== Publication JS ============== -->
+  <script>
+    const authorInfo = {
+      // Fill in author homepage links here, e.g.:
+      // "Author Name": {homepage: "https://their-site.com/"},
+    };
+
+    const allPublications = [
+      // Example entry — replace with your own publications
+      // {
+      //   imageSrcBefore: "data/paper_thumb.jpg",
+      //   imageSrcAfter: "data/paper_thumb.gif",
+      //   title: "Your Paper Title",
+      //   authors: [
+      //     "<strong>Kuie</strong>",
+      //     "Co-author Name",
+      //   ],
+      //   venue: "Conference / Journal Name, Year",
+      //   links: `
+      //     <a href="#">arXiv</a> |
+      //     <a href="#">Project Page</a> |
+      //     <a href="#">Code</a>
+      //   `,
+      //   selected: true,
+      //   papertype: "Conference Proceedings",
+      //   year: "2025",
+      // },
+    ];
+
+    function generatePublicationEntry(imageSrcBefore, imageSrcAfter, title, authors, venue, links) {
+      function preprocessAuthorId(authorId) {
+        return authorId.replace(/[#*]$/, "");
+      }
+      function generateAuthorLinks(authors) {
+        return authors.map(authorId => {
+          const processedAuthorId = preprocessAuthorId(authorId);
+          const author = authorInfo[processedAuthorId];
+          if (author && author.homepage) {
+            return `<a href="${author.homepage}">${authorId}</a>`;
+          } else {
+            return authorId;
+          }
+        }).join(", ");
+      }
+      return `
+        <tr onmouseout="toggleOpacity('${title}', false)" onmouseover="toggleOpacity('${title}', true)">
+          <td style="padding:20px;width:20%;vertical-align:middle;padding-top:5px;padding-bottom:20px">
+            <div class="one">
+              <div class="two" id="${title}_image">
+                <img src="${imageSrcAfter}" width="120" height="90" style="opacity: 0;">
+              </div>
+              <img src="${imageSrcBefore}" width="120" height="90">
+            </div>
+          </td>
+          <td style="padding:00px;width:80%;vertical-align:middle;padding-top:5px;padding-bottom:20px;">
+            <papertitle>${title}</papertitle>
+            <br>
+            ${generateAuthorLinks(authors)}
+            <br>
+            ${venue}
+            <br>
+            ${links}
+          </td>
+        </tr>
+      `;
+    }
+
+    function toggleOpacity(id, show) {
+      const img = document.getElementById(id + "_image").querySelector("img");
+      if (img) img.style.opacity = show ? "1" : "0";
+    }
+
+    function populatePublications(publications) {
+      const container = document.getElementById("publications");
+      container.innerHTML = "";
+      const selectedActive = document.querySelector('.publicationFilter[data-filter="selected"]').classList.contains("active");
+
+      if (selectedActive) {
+        publications.forEach(pub => {
+          container.innerHTML += generatePublicationEntry(
+            pub.imageSrcBefore, pub.imageSrcAfter, pub.title,
+            pub.authors, pub.venue, pub.links
+          );
+        });
+      } else {
+        const grouped = {};
+        publications.forEach(pub => {
+          if (!grouped[pub.year]) grouped[pub.year] = [];
+          grouped[pub.year].push(pub);
+        });
+        Object.keys(grouped).sort((a, b) => b - a).forEach(year => {
+          container.innerHTML += `
+            <tr><td colspan="2" style="padding-top:05px;padding-left:20px;padding-bottom:0px">
+              <heading2>${year}</heading2>
+            </td></tr>`;
+          grouped[year].forEach(pub => {
+            container.innerHTML += generatePublicationEntry(
+              pub.imageSrcBefore, pub.imageSrcAfter, pub.title,
+              pub.authors, pub.venue, pub.links
+            );
+          });
+        });
+      }
+    }
+
+    document.querySelector('.publicationFilter[data-filter="selected"]').classList.add("active");
+    document.querySelector('.publicationFilter[data-filter="all"]').classList.remove("active");
+
+    populatePublications(allPublications.filter(pub => pub.selected));
+
+    document.querySelectorAll(".publicationFilter").forEach(link => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const filter = event.target.getAttribute("data-filter");
+        if (filter === "selected") {
+          document.querySelector('.publicationFilter[data-filter="selected"]').classList.add("active");
+          document.querySelector('.publicationFilter[data-filter="all"]').classList.remove("active");
+          populatePublications(allPublications.filter(pub => pub.selected));
+        } else {
+          document.querySelector('.publicationFilter[data-filter="all"]').classList.add("active");
+          document.querySelector('.publicationFilter[data-filter="selected"]').classList.remove("active");
+          populatePublications(allPublications);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
