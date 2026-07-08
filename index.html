@@ -130,7 +130,7 @@
           "Xiaochun Cao",
         ],
         venue: "European Conference on Computer Vision (<em>ECCV</em>), 2026",
-        links: `<a href="https://kuieless.github.io/AerialMetric-ECCV2026-page/">Project Page</a>`,
+        links: `<a href="https://kuieless.github.io/AerialMetric-ECCV2026-page/">Project Page</a> / <a href="https://arxiv.org/pdf/2606.29716">arXiv</a>`,
         selected: true,
         papertype: "Conference Proceedings",
         year: "2026",
@@ -195,7 +195,11 @@
 
     function generatePublicationEntry(imageSrcBefore, imageSrcAfter, title, authors, venue, links) {
       function preprocessAuthorId(authorId) {
-        return authorId.replace(/[#*]$/, "");
+        return authorId
+          .replace(/<sup>.*?<\/sup>/g, "")
+          .replace(/<\/?strong>/g, "")
+          .replace(/[#*]$/, "")
+          .trim();
       }
       function generateAuthorLinks(authors) {
         return authors.map(authorId => {
